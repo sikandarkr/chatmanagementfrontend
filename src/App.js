@@ -6,7 +6,7 @@ import Register from "./Pages/Register";
 import PrivateRoute from '../src/Routes/PrivateRoute';
 import PublicRoute from "./Routes/PublicRoute";
 import TopNav from '../src/Component/Common/TopNav';
-
+import './App.css';
 import "antd/dist/antd.css";
 function App() {
     return (
