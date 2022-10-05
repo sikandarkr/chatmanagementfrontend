@@ -1,0 +1,41 @@
+.search-bar{
+    display: flex !important;
+    flex-direction: row !important;
+    width:50% !important;
+    background-color: white; 
+    border-radius: 1px;
+}
+
+.search-input {
+    background-color:transparent;
+    border:none;
+    height:40px;
+    width:100% !important;
+}
+.search-input:focus {
+    outline:none;
+}
+.drop-down{
+    flex: 5%;
+    margin-top: 0.5rem;
+
+}
+.vline{
+    border-left: 2px solid lightgrey;
+    height: 40px;
+    margin-top:2px;
+    margin-bottom: 2px;
+}
+ .drop-down .ant-select-selector {
+    border:none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+}
+
+.search-container{
+    flex: 90%; 
+}
+.search-icon{
+    flex: 8%; 
+    margin-top: 0.5rem;
+}

@@ -1,9 +1,12 @@
 import React from 'react';
 import '../../../src/styles/Navbar.css';
+import SearchBar from '../Common/SearchBar';
 function TopNav(){
     return(
         <div className="topnav">
-           <p>hiii</p>
+            <div className="search-component">
+              <SearchBar/>
+            </div>
         </div>
     )
 }
