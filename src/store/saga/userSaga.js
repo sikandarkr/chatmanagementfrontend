@@ -14,15 +14,19 @@ function getApi() {
 
 function* fetchUsers(action) {
    try {
-      const users = yield call(getApi);
-      yield put({type: 'GET_USERS_SUCCESS', users: users});
+      const userName = yield call(getApi);
+      yield put({type: 'GET_USERS_SUCCESS', userName: userName});
    } catch (e) {
       yield put({type: 'GET_USERS_FAILED', message: e.message});
    }
 }
 
+
+
 function* userSaga() {
    yield takeEvery('GET_USERS_REQUESTED', fetchUsers);
+  
+
 }
 
 export default userSaga;

@@ -1,0 +1,30 @@
+.container-first{
+  color:red;  
+  background-color: red; 
+  /* display: grid;
+  grid-template-rows: 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr ; */
+}
+
+
+.box-container{
+  display: flex;
+  column-gap: 12px;
+  color: black;
+}
+
+
+.card{
+  width: 440px;
+}
+
+
+.color{
+  color: red;
+}
+
+
+.setColor{
+  color: black;
+}
+

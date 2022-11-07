@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { Routes, Route, Navigate, useNavigate, useLocation ,BrowserRouter as Router} from 'react-router-dom';
 import Home from '../src/Pages/Home';
 import Login from '../src/Pages/Login';
@@ -8,6 +8,9 @@ import PublicRoute from "./Routes/PublicRoute";
 import TopNav from '../src/Component/Common/TopNav';
 import './App.css';
 import "antd/dist/antd.css";
+
+
+
 function App() {
     return (
         <div >
@@ -16,7 +19,7 @@ function App() {
                     <Routes>
                     <Route path="/" element={<Login />} />
                     <Route
-                        path="/"
+                        path="/home"
                         element={
                             <PrivateRoute>
                                 <Home />

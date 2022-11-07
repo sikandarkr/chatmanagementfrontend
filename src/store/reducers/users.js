@@ -3,7 +3,11 @@ const initialState = {
     users: [],
     loading: false,
     error: null,
+    dataItem:[],
+    userName:[]
+    
   }
+  
   
   export default function users(state = initialState, action) {
     switch (action.type) {
@@ -24,6 +28,13 @@ const initialState = {
           loading: false,
           error: action.message,
         }
+    // from get git new users
+      case type.GET_GIT_USERS:
+         return {
+          ...state,
+          dataItem:action.data
+
+ }
       default:
         return state
     }

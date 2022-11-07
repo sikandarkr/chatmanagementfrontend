@@ -14,7 +14,8 @@ import rootSaga from './saga/index';
 const sagaMiddleware = createSagaMiddleware();
 const store = compose(
   applyMiddleware(sagaMiddleware),
-  // window.devToolsExtension && window.devToolsExtension(),
+ 
+  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__()
 )(createStore)(rootReducer);
 
 sagaMiddleware.run(rootSaga);
