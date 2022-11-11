@@ -12,9 +12,9 @@ import axios from 'axios';
 function Home(props){
     const dispatch = useDispatch();
     // const users = useSelector(state => state.users.users);
-    const x=useSelector(state=>state.users)
+    const x=useSelector(state=>state.users.users)
     console.log("this is x value",x);
-    const [users, setUsers]=useState([]);
+    // const [users, setUsers]=useState([]);
     const loading = useSelector(state => state.users.loading);
     const error = useSelector(state => state.users.error);
     const [dataItem, setDataItem] = useState([]);
@@ -26,27 +26,25 @@ function Home(props){
     const getUserName = async () => {
     const response = await fetch('https://api.github.com/users');
     const data = await response.json();
-   
-    // dispatch(getgitusers(data))
+    console.log("datadata",data)
     setDataItem(data);
     
   }
 
 
-  const getuserData=async()=>{
-    axios.get("https://jsonplaceholder.typicode.com/users").then((response) => {
-      setUsers(response.data);
-    });
-  }
+  // const getuserData=async()=>{
+  //   axios.get("https://jsonplaceholder.typicode.com/users").then((response) => {
+  //     setUsers(response.data);
+  //   });
+  // }
 
 
 
   useEffect(() => {
     dispatch(getUsers());
-    getuserData(); 
+    // getuserData(); 
     getUserName();
   },[])
-  // console.log("this is users of github", users);
 
   
 
@@ -58,7 +56,7 @@ function Home(props){
 
   
   return (<div>
-   {users.map(item => 
+   {x.map(item => 
     <Row className="container-first" key={item.name} >
       {dataItem.map(itm =>
         <Col span={6} xs={24} xl={8} sm={24} md={12} lg={6} xxl={6} className="container-fluid mt-5" >

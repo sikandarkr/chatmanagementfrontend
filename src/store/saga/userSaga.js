@@ -12,10 +12,14 @@ function getApi() {
     .catch((error) => {throw error})
 }
 
+
 function* fetchUsers(action) {
+   console.log("hi this is sagagenerater",action.payload)
    try {
-      const userName = yield call(getApi);
-      yield put({type: 'GET_USERS_SUCCESS', userName: userName});
+      const data = yield call(getApi);
+      console.log("mydata",data);
+      yield put({type: 'GET_USERS_SUCCESS', data: data});
+      
    } catch (e) {
       yield put({type: 'GET_USERS_FAILED', message: e.message});
    }

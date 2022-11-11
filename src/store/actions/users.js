@@ -9,8 +9,7 @@ export function getUsers(users) {
       type:type.GET_USERS_REQUESTED,
       // payload:userName,
       payload:users
-      
-    }
+  }
 }
 
 

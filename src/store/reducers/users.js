@@ -17,10 +17,11 @@ const initialState = {
           loading: true,
         }
       case type.GET_USERS_SUCCESS:
+        console.log("this is reducer",action.data)
         return {
           ...state,
           loading: false,
-          users: action.users
+          users: action.data
         }
       case type.GET_USERS_FAILED:
         return {
